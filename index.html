@@ -17,7 +17,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script type="text/javascript" src="crud.js"></script>
     <link href="style.css" rel="stylesheet" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
@@ -30,6 +29,10 @@
         <input type="text" class="form-control" id="name" placeholder="url" />
         <label for="floatingInput">닉네임</label>
       </div>
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="age" placeholder="url" />
+        <label for="floatingInput">나이</label>
+      </div>
       <div class="form-floating">
         <textarea
           class="form-control"
@@ -38,44 +41,78 @@
           style="height: 100px"
         ></textarea>
         <label for="floatingTextarea2">응원댓글</label>
-        <form name="myform" id="myform" method="post" action="./save">
-          <fieldset>
-            <input type="radio" name="rating" value="5" id="rate1" /><label
-              for="rate1"
-              >⭐</label
-            >
-            <input type="radio" name="rating" value="4" id="rate2" /><label
-              for="rate2"
-              >⭐</label
-            >
-            <input type="radio" name="rating" value="3" id="rate3" /><label
-              for="rate3"
-              >⭐</label
-            >
-            <input type="radio" name="rating" value="2" id="rate4" /><label
-              for="rate4"
-              >⭐</label
-            >
-            <input type="radio" name="rating" value="1" id="rate5" /><label
-              for="rate5"
-              >⭐</label
-            >
-          </fieldset>
-        </form>
+
+        <div id="id_rating" class="rating">
+          <input type="radio" id="star5" name="rating" value="5" /><label
+            for="star5"
+            class="full"
+            onclick="rating_click_event(5)"
+            title="Awesome"
+          ></label>
+          <input type="radio" id="star4.5" name="rating" value="4.5" /><label
+            for="star4.5"
+            class="half"
+            onclick="rating_click_event(4.5)"
+          ></label>
+          <input type="radio" id="star4" name="rating" value="4" /><label
+            for="star4"
+            class="full"
+            onclick="rating_click_event(4)"
+          ></label>
+          <input type="radio" id="star3.5" name="rating" value="3.5" /><label
+            for="star3.5"
+            class="half"
+            onclick="rating_click_event(3.5)"
+          ></label>
+          <input type="radio" id="star3" name="rating" value="3" /><label
+            for="star3"
+            class="full"
+            onclick="rating_click_event(3)"
+          ></label>
+          <input type="radio" id="star2.5" name="rating" value="2.5" /><label
+            for="star2.5"
+            class="half"
+            onclick="rating_click_event(2.5)"
+          ></label>
+          <input type="radio" id="star2" name="rating" value="2" /><label
+            for="star2"
+            class="full"
+            onclick="rating_click_event(2)"
+          ></label>
+          <input type="radio" id="star1.5" name="rating" value="1.5" /><label
+            for="star1.5"
+            class="half"
+            onclick="rating_click_event(1.5)"
+          ></label>
+          <input type="radio" id="star1" name="rating" value="1" /><label
+            for="star1"
+            class="full"
+            onclick="rating_click_event(1)"
+          ></label>
+          <input type="radio" id="star0.5" name="rating" value="0.5" /><label
+            for="star0.5"
+            class="half"
+            onclick="rating_click_event(0.5)"
+          ></label>
+        </div>
+        <div id="id_text_rating"></div>
       </div>
-      <button onclick="save_comment()" type="button" class="btn btn-dark">
+
+      <button onclick="write_comments()" type="button" class="btn btn-dark">
         등록
       </button>
     </div>
     <div class="mycards" id="comment-list">
-      <div class="card">
+      <!-- <div class="card">
         <div class="card-body">
           <blockquote class="blockquote mb-0">
             <p>잘부탁드려요</p>
             <footer class="blockquote-footer">ㅁㅁㅁ</footer>
           </blockquote>
         </div>
-      </div>
+      </div> -->
     </div>
+    <script type="text/javascript" src="star_rating.js"></script>
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>
