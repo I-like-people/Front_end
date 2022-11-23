@@ -16,5 +16,5 @@ const observer = new IntersectionObserver(entries => {
 
 const boxList = document.querySelectorAll('.box');
 
-// 반복문을 돌려 모든 DOM에 적용
+// 반복문을 돌려 모든 DOM에 적용ddd\\dasdqdqdqw
 boxList.forEach(el => observer.observe(el));
