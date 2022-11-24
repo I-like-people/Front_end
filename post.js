@@ -22,23 +22,23 @@ const boxList = document.querySelectorAll('.box');
 boxList.forEach(el => observer.observe(el));
 
 var doc = window.document,
-  context = doc.querySelector('.mainwrap'),
-  clones = context.querySelectorAll('.mainbox2'),
+  context = doc.querySelector(".js-loop"),
+  clones = context.querySelectorAll(".is-clone"),
   disableScroll = false,
   scrollHeight = 0,
   scrollPos = 0,
   clonesHeight = 0,
   i = 0;
 
-function getScrollPos () {
+function getScrollPos() {
   return (context.pageYOffset || context.scrollTop) - (context.clientTop || 0);
 }
 
-function setScrollPos (pos) {
+function setScrollPos(pos) {
   context.scrollTop = pos;
 }
 
-function getClonesHeight () {
+function getClonesHeight() {
   clonesHeight = 0;
 
   for (i = 0; i < clones.length; i += 1) {
@@ -48,7 +48,7 @@ function getClonesHeight () {
   return clonesHeight;
 }
 
-function reCalc () {
+function reCalc() {
   scrollPos = getScrollPos();
   scrollHeight = context.scrollHeight;
   clonesHeight = getClonesHeight();
@@ -58,7 +58,7 @@ function reCalc () {
   }
 }
 
-function scrollUpdate () {
+function scrollUpdate() {
   if (!disableScroll) {
     scrollPos = getScrollPos();
 
@@ -81,32 +81,41 @@ function scrollUpdate () {
   }
 }
 
-function init () {
+function init() {
   reCalc();
-  
-  context.addEventListener('scroll', function () {
-    window.requestAnimationFrame(scrollUpdate);
-  }, false);
 
-  window.addEventListener('resize', function () {
-    window.requestAnimationFrame(reCalc);
-  }, false);
+  context.addEventListener(
+    "scroll",
+    function () {
+      window.requestAnimationFrame(scrollUpdate);
+    },
+    false
+  );
+
+  window.addEventListener(
+    "resize",
+    function () {
+      window.requestAnimationFrame(reCalc);
+    },
+    false
+  );
 }
 
-if (document.readyState !== 'loading') {
-  init()
+if (document.readyState !== "loading") {
+  init();
 } else {
-  doc.addEventListener('DOMContentLoaded', init, false)
+  doc.addEventListener("DOMContentLoaded", init, false);
 }
-
-
-
-
-
-
-
 
 // Just for this demo: Center the middle block on page load
 window.onload = function () {
-  setScrollPos(Math.round(clones[0].getBoundingClientRect().top + getScrollPos() - (context.offsetHeight - clones[0].offsetHeight) / 2));
+  setScrollPos(
+    Math.round(
+      clones[0].getBoundingClientRect().top +
+        getScrollPos() -
+        (context.offsetHeight - clones[0].offsetHeight) / 2
+    )
+  );
 };
+
+
