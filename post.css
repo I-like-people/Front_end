@@ -76,7 +76,7 @@
   .box {
     width: 70rem;
     height: 20%;
-    margin:5rem auto;
+    margin: 10rem auto;
     display: flex; 
     position: relative;
     text-align: center;
