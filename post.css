@@ -64,32 +64,24 @@
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
   }
-  .mainbox {
+  .Mainbox {
     width: 70rem;
     height: 680px;
-    justify-content: center;
-    align-items: center;
-    background-color: #00febe;
-    overflow-x : scroll;
     position: relative;
+    justify-content: center;
+    background-color: #00febe;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
-
-  .mainbox::-webkit-scrollbar {
-    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+  .Mainbox::-webkit-scrollbar {
+    display: none;/* 크롬, 사파리, 오페라, 엣지 */
   }
-  .Loop {
-  position: relative;
-  height: 100%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
   .box {
     width: 70rem;
     height: 20%;
     margin: 2rem auto;
-    display: flex;
+    display: flex; 
+    position: relative;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
