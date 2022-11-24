@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="star_rating.css" rel="stylesheet" />
+    <title>star_rating</title>
+  </head>
+  <body>
+    <div id="id_rating_wrapper">
+      <div id="id_rating" class="rating">
+        <input type="radio" id="star5" name="rating" value="5" /><label
+          for="star5"
+          class="full"
+          onclick="rating_click_event(5)"
+          title="Awesome"
+        ></label>
+        <input type="radio" id="star4.5" name="rating" value="4.5" /><label
+          for="star4.5"
+          class="half"
+          onclick="rating_click_event(4.5)"
+        ></label>
+        <input type="radio" id="star4" name="rating" value="4" /><label
+          for="star4"
+          class="full"
+          onclick="rating_click_event(4)"
+        ></label>
+        <input type="radio" id="star3.5" name="rating" value="3.5" /><label
+          for="star3.5"
+          class="half"
+          onclick="rating_click_event(3.5)"
+        ></label>
+        <input type="radio" id="star3" name="rating" value="3" /><label
+          for="star3"
+          class="full"
+          onclick="rating_click_event(3)"
+        ></label>
+        <input type="radio" id="star2.5" name="rating" value="2.5" /><label
+          for="star2.5"
+          class="half"
+          onclick="rating_click_event(2.5)"
+        ></label>
+        <input type="radio" id="star2" name="rating" value="2" /><label
+          for="star2"
+          class="full"
+          onclick="rating_click_event(2)"
+        ></label>
+        <input type="radio" id="star1.5" name="rating" value="1.5" /><label
+          for="star1.5"
+          class="half"
+          onclick="rating_click_event(1.5)"
+        ></label>
+        <input type="radio" id="star1" name="rating" value="1" /><label
+          for="star1"
+          class="full"
+          onclick="rating_click_event(1)"
+        ></label>
+        <input type="radio" id="star0.5" name="rating" value="0.5" /><label
+          for="star0.5"
+          class="half"
+          onclick="rating_click_event(0.5)"
+        ></label>
+      </div>
+      <div id="id_text_rating">0점</div>
+    </div>
+
+    <script type="text/javascript" src="star_rating.js"></script>
+  </body>
+</html>
