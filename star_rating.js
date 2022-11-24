@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function rating_click_event(id_text_rating, val) {
   let txt = document.querySelector("#" + id_text_rating);
   txt.innerHTML = val + "점";
@@ -25,3 +26,9 @@ function make_rating_star(num, id_rating, id_text_rating) {
 
   rating_element.innerHTML = rating;
 }
+=======
+function rating_click_event(val) {
+  let txt = document.querySelector("#id_text_rating");
+  txt.innerHTML = val + "점";
+}
+>>>>>>> c9abfbb1320ecf16644055331eed1d1503be4a0f
