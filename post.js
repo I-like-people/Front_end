@@ -117,5 +117,3 @@ window.onload = function () {
     )
   );
 };
-
-

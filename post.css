@@ -73,26 +73,39 @@
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
-  .Mainbox::-webkit-scrollbar {
-    display: none;/* 크롬, 사파리, 오페라, 엣지 */
-  }
   .box {
     width: 70rem;
     height: 20%;
-    margin: 2rem auto;
+    margin:5rem auto;
     display: flex; 
     position: relative;
+    text-align: center;
     justify-content: center;
     align-items: center;
     font-size: 2rem;
     background-color: #febf00;
     transition: .4s;
   }
+  /*width: 70rem;
+  height: 20%;
+  margin: 2rem auto;
+  display: flex; 
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  background-color: #febf00;
+  transition: .4s;*/
   
   .box.active {
     width: 30rem;
     background: #f03d3d00;
     color: #f03d3d00;
+  }
+
+  .Mainbox::-webkit-scrollbar {
+    display:none;/* 크롬, 사파리, 오페라, 엣지 */
   }
   
   /* ------------- */
