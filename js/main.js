@@ -5,6 +5,8 @@ import {
   collection,
   getDocs,
   addDoc,
+  query,
+  orderBy,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -22,7 +24,8 @@ const db = getFirestore(app);
 
 const commentCollection = collection(db, "comment");
 async function getComments(db) {
-  const commentSnapshot = await getDocs(commentCollection);
+  const q = await query(commentCollection, orderBy("createdDate", "desc"));
+  const commentSnapshot = await getDocs(q);
   const commentList = commentSnapshot.docs.map((doc) => doc.data());
 
   let commentListSection = document.querySelector("#comment-list");
@@ -30,15 +33,9 @@ async function getComments(db) {
   for (let i = 0; i < commentList.length; i++) {
     const element = commentList[i];
     commentListSection.innerHTML += `
-        <div class="card">
-        <div class="card-body">
-        <blockquote class="blockquote mb-0">
-            <p>${element.comment}</p>
-            <small>${element.star}</small>
-            <footer class="blockquote-footer">${element.nickname}</footer>
-            <small>${element.age}</small>
-        </blockquote>
-        </div>
+    <div class="card">
+      <div class="card-body">${element.comment}</div>
+      
     </div>
     `;
   }
@@ -47,21 +44,17 @@ async function getComments(db) {
 getComments(db);
 
 async function write_comments(db) {
-  let star = document.querySelector("#id_text_rating").innerHTML;
-  let nickname = document.querySelector("#name").value;
-  let comment = document.querySelector("#comment").value;
-  let age = document.querySelector("#age").value;
-  console.log(star, nickname, comment);
-  if (star == "" || nickname == "" || comment == "") {
-    alert("별점과 닉네임과 댓글은 비어있으면 안됩니다. ");
+  const comment = document.querySelector("#id_comment").value;
+  const createdDate = new Date().getTime();
+  console.log(comment, createdDate);
+  if (comment == "") {
+    alert("댓글은 비어있으면 안됩니다. ");
   } else {
     await addDoc(commentCollection, {
-      nickname: nickname,
-      star: star,
       comment: comment,
-      age: age,
+      createdDate: createdDate,
     });
-    alert("댓글이 등록됐습니다.");
+    alert("등록되었습니다.");
     window.location.reload();
   }
 }
