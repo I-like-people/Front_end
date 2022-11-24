@@ -40,7 +40,7 @@ body {
   margin: 10px 5px;
 }
 
-#id_rating_wrapper {
+.rating_wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -87,7 +87,7 @@ body {
 .rating > label:before {
   content: "\f005";
   font-family: FontAwesome;
-  margin: 5px;
+  margin: 8px;
   font-size: 1.5rem;
   display: inline-block;
   cursor: pointer;
