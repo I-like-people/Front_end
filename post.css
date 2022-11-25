@@ -135,3 +135,35 @@ body {
   top: 100%;
   right: 100%;
 }
+
+.box_img_wrapper {
+  width: 30%;
+  height: 100%;
+}
+
+.box_img_wrapper .box_img {
+  width: 50%;
+  height: 100%;
+}
+
+.box_comment_wrapper {
+  width: 45%;
+  height: 100%;
+  font-size: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.rating_wrapper {
+  height: 100%;
+  width: 22%;
+}
+.box_img.active {
+  opacity: 0;
+}
+
+.comment_btn.active {
+  opacity: 0;
+}
+.rating.active {
+  opacity: 0;
+}

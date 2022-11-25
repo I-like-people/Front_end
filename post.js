@@ -1,25 +1,25 @@
 const options = {
   root: null, // viewport
   rootMargin: "1px",
-  threshold: 1  // 50%가 viewport에 들어와 있어야 callback 실행
-}
+  threshold: 1, // 50%가 viewport에 들어와 있어야 callback 실행
+};
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.remove('active');
-
+      entry.target.classList.remove("active");
     } else {
-      entry.target.classList.add('active');
-
+      entry.target.classList.add("active");
     }
   });
 }, options);
 
-const boxList = document.querySelectorAll('.box');
+const boxList = document.querySelectorAll(
+  ".box, .box_img, .comment_btn, .rating"
+);
 
 // 반복문을 돌려 모든 DOM에 적용
-boxList.forEach(el => observer.observe(el));
+boxList.forEach((el) => observer.observe(el));
 
 var doc = window.document,
   context = doc.querySelector(".js-loop"),
@@ -117,5 +117,3 @@ window.onload = function () {
     )
   );
 };
-
-

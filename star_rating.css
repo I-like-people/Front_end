@@ -43,8 +43,11 @@ body {
 .rating_wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 96%;
+}
+.rating_text {
+  font-size: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  margin: 8px;
 }
 
 .card {
