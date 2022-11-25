@@ -69,7 +69,7 @@
     height: 680px;
     position: relative;
     justify-content: center;
-    background-color: #00febe;
+    background-color: #ebf5ff;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
@@ -83,21 +83,21 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    background-color: #febf00;
+    background-color: #e4ddce;
+    transition: .4s;
+    border-radius: 10px;
+  }
+  .box img {
+    position: absolute;
+    margin: auto;
+    display: block;
+    left: 10px;
+    width: 12rem;
+    height: 8rem;
+    object-fit: contain;
+    border-radius: 10px;
     transition: .4s;
   }
-  /*width: 70rem;
-  height: 20%;
-  margin: 2rem auto;
-  display: flex; 
-  position: relative;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  font-size: 2rem;
-  background-color: #febf00;
-  transition: .4s;*/
-  
   .box.active {
     width: 30rem;
     background: #f03d3d00;

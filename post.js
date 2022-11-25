@@ -16,7 +16,7 @@ const observer = new IntersectionObserver(entries => {
   });
 }, options);
 
-const boxList = document.querySelectorAll('.box');
+const boxList = document.querySelectorAll('.box','.box img');
 
 // 반복문을 돌려 모든 DOM에 적용
 boxList.forEach(el => observer.observe(el));
