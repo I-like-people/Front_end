@@ -137,20 +137,22 @@ body {
 }
 
 .box_img_wrapper {
-  width: 30%;
+  width: 20%;
   height: 100%;
 }
 
 .box_img_wrapper .box_img {
   height: 100%;
-  width: 60%;
+  width: 100%;
 }
 
 .box_comment_wrapper {
-  width: 45%;
+  margin-left: 10px;
+  width: 55%;
   height: 100%;
   font-size: 20px;
   font-family: "Noto Sans KR", sans-serif;
+  text-align: left;
 }
 
 .rating_wrapper {
@@ -165,4 +167,9 @@ body {
 }
 .rating.active {
   opacity: 0;
+}
+.rating_text {
+  font-size: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  margin-top: 10px;
 }

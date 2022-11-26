@@ -43,7 +43,6 @@ body {
 .rating_wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .rating_text {
   font-size: 20px;
