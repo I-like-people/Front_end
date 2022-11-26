@@ -15,7 +15,7 @@ const observer = new IntersectionObserver((entries) => {
 }, options);
 
 const boxList = document.querySelectorAll(
-  ".box, .box_img, .comment_btn, .rating"
+  ".box, .box img, .box, .rating, .box_comment_wrapper"
 );
 
 // 반복문을 돌려 모든 DOM에 적용

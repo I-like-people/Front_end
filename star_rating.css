@@ -43,11 +43,11 @@ body {
 .rating_wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .rating_text {
   font-size: 20px;
   font-family: "Noto Sans KR", sans-serif;
-  margin: 8px;
 }
 
 .card {
@@ -90,7 +90,7 @@ body {
 .rating > label:before {
   content: "\f005";
   font-family: FontAwesome;
-  margin: 8px;
+  margin: 10px;
   font-size: 1.5rem;
   display: inline-block;
   cursor: pointer;

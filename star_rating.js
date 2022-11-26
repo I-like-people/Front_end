@@ -4,6 +4,7 @@ function rating_click_event(id_text_rating, val) {
 }
 
 function make_rating_star(num, id_rating, id_text_rating) {
+  console.log(num, id_rating, id_text_rating);
   const scores = [5.0, 4.5, 4.0, 3.5, 3.0, 2.5, 2.0, 1.5, 1.0, 0.5];
   let rating = "";
   for (let i = 0; i < scores.length; i++) {
@@ -22,6 +23,5 @@ function make_rating_star(num, id_rating, id_text_rating) {
   }
 
   const rating_element = document.querySelector("#" + id_rating);
-
   rating_element.innerHTML = rating;
 }
